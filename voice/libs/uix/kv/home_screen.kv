@@ -1,0 +1,33 @@
+<HomeScreen>
+    radius: [25, 0, 0, 0]
+    md_bg_color: app.theme_cls.primary_color
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            left_action_items: [["robot", lambda x: x]]
+            specific_text_color: app.theme_cls.accent_color
+        
+        Image:
+            source: 'assets\images\voice.png'
+            size: self.texture_size
+
+        MDLabel:
+            text: "How can I help you?"
+            halign: "center"
+            font_style: 'H6'
+            theme_text_color: "Custom"
+            specific_text_color: app.theme_cls.accent_color
+
+        AnchorLayout:
+            anchor_x: "center"
+            anchor_y: "bottom"
+            padding: dp(20)
+
+            MDFloatingActionButton:
+                icon: 'microphone'
+                theme_icon_color: "Custom"
+                md_bg_color: app.theme_cls.accent_color
+                icon_color: app.theme_cls.primary_color
+                on_release: root.talk()

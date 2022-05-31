@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice\main.py", line 28, in <module>
+    voice().run()
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\app.py", line 955, in run
+    runTouchApp()
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\base.py", line 574, in runTouchApp
+    EventLoop.mainloop()
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\base.py", line 339, in mainloop
+    self.idle()
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\base.py", line 383, in idle
+    self.dispatch_input()
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\base.py", line 334, in dispatch_input
+    post_dispatch_input(*pop(0))
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\base.py", line 302, in post_dispatch_input
+    wid.dispatch('on_touch_up', me)
+  File "kivy\_event.pyx", line 731, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivymd\uix\button.py", line 1487, in on_touch_up
+    super(MDFloatingActionButton, self).on_touch_up(touch)
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 296, in on_touch_up
+    return super().on_touch_up(touch)
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivymd\uix\button.py", line 981, in on_touch_up
+    return super().on_touch_up(touch)
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivymd\uix\button.py", line 1101, in on_touch_up
+    return super().on_touch_up(touch)
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\uix\behaviors\button.py", line 179, in on_touch_up
+    self.dispatch('on_release')
+  File "kivy\_event.pyx", line 727, in kivy._event.EventDispatcher.dispatch
+  File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1191, in kivy._event.EventObservers._dispatch
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice_venv\lib\site-packages\kivy\lang\builder.py", line 55, in custom_callback
+    exec(__kvlang__.co_value, idmap)
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice\libs\uix\kv\home_screen.kv", line 33, in <module>
+    on_release: root.talk()
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice\libs\uix\baseclass\home_screen.py", line 9, in talk
+    robot()
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice\rule.py", line 109, in robot
+    sendEmail(receiver)
+  File "C:\Users\thama\Desktop\voice-assistant-voice\voice\libs\applibs\sendEmail.py", line 36, in sendEmail
+    server.login(sender_email, password)
+  File "C:\Python310\lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Python310\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "C:\Python310\lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials t9-20020aa79389000000b0050da02088e2sm757970pfe.103 - gsmtp')
